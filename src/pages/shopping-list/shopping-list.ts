@@ -13,6 +13,10 @@ export class ShoppingListPage {
   ingredients: Ingredient[] = []; 
   
   constructor(public ingredientsProvider: IngredientsProvider) {}
+
+  ionViewWillEnter() {
+    this.loadShoppingList();
+  }
   
   onCreateShoppingList(form: NgForm) {
     this.ingredientsProvider.addIngredient(form.value.ingredientName, 
