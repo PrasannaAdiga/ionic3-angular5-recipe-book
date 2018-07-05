@@ -35,8 +35,8 @@ export class MyApp {
 
   initializeApp() {
     firebase.initializeApp({
-      apiKey: "AIzaSyBNvLSME-hkI6AGmqP9wyR29FwBtKSgKqg",
-      authDomain: "recipe-book-e9f2f.firebaseapp.com"
+      apiKey: "",
+      authDomain: ""
     });
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
