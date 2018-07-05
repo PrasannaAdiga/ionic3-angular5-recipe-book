@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IngredientsProvider } from '../providers/ingredients/ingredients';
 import { RecipesProvider } from '../providers/recipes/recipes';
+import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RecipesProvider } from '../providers/recipes/recipes';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IngredientsProvider,
-    RecipesProvider
+    RecipesProvider,
+    AuthProvider
   ]
 })
 export class AppModule {}

@@ -28,7 +28,7 @@
       </ion-item>
       <ion-item>
           <button ion-button [disabled]="!form.valid">Submit</button>
-        </ion-item>
+      </ion-item>
     </ion-list>
     <ion-list>
       <ion-item *ngFor="let ingredient of ingredients; let i=index" (click)="removeIngredient(i)">

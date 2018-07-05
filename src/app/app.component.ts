@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import firebase from 'firebase';
 
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -13,6 +14,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
+  signupPage: any = 'SignupPage';
+  signinPage: any = 'SigninPage';
 
   pages: Array<{title: string, component: any}>;
 
@@ -22,12 +25,19 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Recipes', component: TabsPage }
+      { title: 'Recipe Book', component: TabsPage },
+      { title: 'Signup', component: this.signupPage },
+      { title: 'Signin', component: this.signinPage },
+      { title: 'Logout', component: HomePage }
     ];
 
   }
 
   initializeApp() {
+    firebase.initializeApp({
+      apiKey: "AIzaSyBNvLSME-hkI6AGmqP9wyR29FwBtKSgKqg",
+      authDomain: "recipe-book-e9f2f.firebaseapp.com"
+    });
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
