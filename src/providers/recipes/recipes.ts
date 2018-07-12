@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Recipe } from '../../data/recipe';
 import { Ingredient } from '../../data/ingredient';
 
+
 @Injectable()
 export class RecipesProvider {
   recipes: Recipe[] = [];

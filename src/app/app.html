@@ -7,8 +7,20 @@
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+      <button menuClose ion-item (click)="openPage(rootPage)">
+        Home
+      </button>
+      <button menuClose ion-item *ngIf="isAuthenticated" (click)="openPage(tabsPage)">
+        Recipe Book
+      </button>
+      <button menuClose ion-item *ngIf="!isAuthenticated" (click)="openPage(signinPage)">
+        Sign In
+      </button>
+      <button menuClose ion-item *ngIf="!isAuthenticated" (click)="openPage(signupPage)">
+        Sign Up
+      </button>
+      <button menuClose ion-item *ngIf="isAuthenticated" (click)="logout()">
+        Logout
       </button>
     </ion-list>
   </ion-content>
