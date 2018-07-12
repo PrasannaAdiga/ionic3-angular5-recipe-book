@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Ingredient } from '../../data/ingredient';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { AuthProvider } from '../auth/auth';
 import 'rxjs/Rx';
-import firebase from 'firebase';
 
 @Injectable()
 export class IngredientsProvider {

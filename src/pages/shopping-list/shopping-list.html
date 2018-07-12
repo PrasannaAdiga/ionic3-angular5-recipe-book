@@ -16,25 +16,23 @@
   <form #form="ngForm" (ngSubmit)= "onCreateShoppingList(form)">
     <ion-list>
       <ion-item>
-        <ion-label>Ingredient Name</ion-label>
+        <ion-label floating>Ingredient Name</ion-label>
         <ion-input 
           type="text" 
           name="ingredientName"
           ngModel
-          fixed required></ion-input>
+          required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Amount</ion-label>
+        <ion-label floating>Amount</ion-label>
         <ion-input 
-        type="number" 
-        name="amount"
-        ngModel
-        fixed required></ion-input>
-      </ion-item>
-      <ion-item>
-          <button ion-button [disabled]="!form.valid">Submit</button>
+          type="number" 
+          name="amount"
+          ngModel
+          required></ion-input>
       </ion-item>
     </ion-list>
+    <button ion-button block [disabled]="!form.valid">Submit</button>
     <ion-list>
       <ion-item *ngFor="let ingredient of ingredients; let i=index" (click)="removeIngredient(i)">
         {{ingredient.name}} ({{ingredient.amount}})
