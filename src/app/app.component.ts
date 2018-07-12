@@ -31,8 +31,8 @@ export class MyApp {
 
   initializeApp() {
     firebase.initializeApp({
-      apiKey: "AIzaSyBNvLSME-hkI6AGmqP9wyR29FwBtKSgKqg",
-      authDomain: "recipe-book-e9f2f.firebaseapp.com"
+      apiKey: "Your API key",
+      authDomain: "your domain"
     });
 
     firebase.auth().onAuthStateChanged(user => {
