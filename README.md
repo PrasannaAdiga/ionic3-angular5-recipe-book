@@ -1,16 +1,14 @@
-#Recipe Book
+# Recipe Book
 
-<h5>This App is created by using Ionic 3 with Angular 5<h5>
 
-<p>
-    This App provides a way to add new Recipes with its name, description, difficulty level and required Ingredients.
-</p>
-<p>
-    New Ingrdients can be added to Shopping List.
-</p>
-<p>  
-    Ingredients can be saved or fetched from Firebase database.
-</p>
+## This App is created by using Ionic 3 with Angular 5
+
+## This App provides the following functionalities:
+
+. This App provides a way to add new Recipes with its name, description, difficulty level and required Ingredients.
+. New Ingredients can be added to Shopping List.
+. Ingredients can be saved or fetched from Firebase database.
+
 
 
 ![alt text](screenshots/Home.png "Home Page")
